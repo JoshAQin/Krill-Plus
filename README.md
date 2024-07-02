@@ -37,11 +37,11 @@ $ bash run.sh
 This script first automatically transforms the algorithm into hardware description language (HDL) by high-level synthesis.
 Then, the HDL program is transformed into bitstream by logic and physical syntheses.
 
-### (4) Bitstream deployment in FPGA.
-We use Pynq to enable Python-based bitstream deployment in FPGA.
-To deploy bitstream and accelerate concurrent graph job processing in FPGA, please connect the FPGA and run:
-```python
-$ python deploy.py [algorithm_name] [dataset_name]
+### (4) Bitstream deployment.
+We use Pynq to enable Python-based bitstream deployment in SoC board.
+To deploy bitstream and accelerate concurrent graph job processing in FPGA, please connect the SoC board and run:
+```bash
+$ make deploy PROJECT_NAME=[your_algorithm_name] DATASET_NAME=[your_dataset_name]
 ```
 
 ## Requirements
